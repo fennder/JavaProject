@@ -3,11 +3,17 @@ package funcao;
 import javax.swing.JOptionPane;
 
 public class Funcao {
-	
-	public void media(Float nota1, Float nota2) {
+	//Função que calcula a média do aluno
+	public void media() {
 		//BLOCO - Declaração de variáveis
-		float media, notar, mediar;
-		String snr;
+		float nota1, nota2, media, notar, mediar;
+		String sn1, sn2, snr;
+		
+		// BLOCO - Entrada de Dados
+		sn1 = JOptionPane.showInputDialog("Digite o valor da Primeira nota: ");
+		nota1 = Float.parseFloat(sn1);
+		sn2 = JOptionPane.showInputDialog("Digite o valor da Segunda nota: ");
+		nota2 = Float.parseFloat(sn2);
 		
 		// BLOCO - Processamento
 		media = (nota1 + nota2)/2;
@@ -27,5 +33,11 @@ public class Funcao {
 
 			}
 		}
+	}
+	
+	//Função para escrever mensagens
+	public String mensagem(String mensagem) {
+		mensagem = (mensagem + " Você entrou na função que retorna uma String");
+		return mensagem;
 	}
 }
