@@ -1,8 +1,12 @@
 package funcao;
 
 import javax.swing.JOptionPane;
+import model.People;
 
 public class Funcao {
+	People p = new People();
+	private String mensage;
+
 	//Função que calcula a média do aluno
 	public void media() {
 		//BLOCO - Declaração de variáveis
@@ -35,9 +39,31 @@ public class Funcao {
 		}
 	}
 	
-	//Função para escrever mensagens
+	//Função que retorna uma mensagem do tipo String
 	public String mensagem(String mensagem) {
-		mensagem = (mensagem + " Você entrou na função que retorna uma String");
-		return mensagem;
+		this.mensage = (mensagem + " Você entrou na função que retorna uma String");
+		return mensage;
+	}
+
+	public void prinPerson(){
+		//BLOCO - Declaração de variáveis
+		int idade;
+		String sidade;
+
+		// BLOCO - Entrada de Dados
+		p.setName(JOptionPane.showInputDialog("Digite o seu primeiro nome: "));
+		p.setLastName(JOptionPane.showInputDialog("Digite o seu sobrenome: "));
+		p.setCpf(JOptionPane.showInputDialog("Digite o seu CPF: "));
+		p.setBirthDay(JOptionPane.showInputDialog("Digite sua data de nascimento no padrão 00/00/0000: "));
+		p.setPhoneNumber(JOptionPane.showInputDialog("Digite o seu celular no padrão (00)00000-0000: "));
+		sidade = JOptionPane.showInputDialog("Digite a sua idade: ");
+		p.setAge(idade = Integer.parseInt(sidade));
+//		-----------------
+		JOptionPane.showMessageDialog(null,"Os dados da pessoa são: Nome: " + p.getName()
+																																												+ " Sobre Nome: " + p.getLastName()
+																																												+ " CPF: " + p.getCpf()
+																																												+ " Data de Nascimento: " + p.getBirthDay()
+																																												+ " Idade: " + p.getAge()
+																																												+ " Telefone: " + p.getPhoneNumber());
 	}
 }
