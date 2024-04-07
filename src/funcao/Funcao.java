@@ -58,12 +58,13 @@ public class Funcao {
 		p.setPhoneNumber(JOptionPane.showInputDialog("Digite o seu celular no padrão (00)00000-0000: "));
 		sidade = JOptionPane.showInputDialog("Digite a sua idade: ");
 		p.setAge(idade = Integer.parseInt(sidade));
-//		-----------------
+		//---------------------
 		JOptionPane.showMessageDialog(null,"Os dados da pessoa são: Nome: " + p.getName()
-																																												+ " Sobre Nome: " + p.getLastName()
-																																												+ " CPF: " + p.getCpf()
-																																												+ " Data de Nascimento: " + p.getBirthDay()
-																																												+ " Idade: " + p.getAge()
-																																												+ " Telefone: " + p.getPhoneNumber());
+																			+ " Sobre Nome: " + p.getLastName()
+																			+ " CPF: " + p.getCpf()
+																			+ " Data de Nascimento: " + p.getBirthDay()
+																			+ " Idade: " + p.getAge()
+																			+ " Telefone: " + p.getPhoneNumber());
 	}
+	
 }
