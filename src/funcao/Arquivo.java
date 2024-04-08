@@ -124,10 +124,6 @@ public class Arquivo {
 			br.write(JOptionPane.showInputDialog(null, "Digite o produto, Valor: "));
 			br.write(",");
 			br.write(JOptionPane.showInputDialog(null, "Digite o produto, Quantidade: "));
-			for(Product p : list) {
-				br.write(p.getName() + "," + String.format("%.f", p.total()));
-				br.newLine();
-			}
 			
 			br.write("\n");
 			br.close();
