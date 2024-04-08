@@ -18,19 +18,19 @@ public class Principal {
 		Funcao funcao = new Funcao();
 		Arquivo arq = new Arquivo();
 		
+		//Usando método de passagem de parâmetro com retorno
 //		mensagem = JOptionPane.showInputDialog("Digite o seu nome: ");
-//		
-//		funcao.media();
 //		funcao.mensagem(mensagem);
 //		JOptionPane.showMessageDialog(null, funcao.mensagem(mensagem));
-//		funcao.prinPerson();
+		
+//		funcao.media();
+//		funcao.printPerson();
 
 		arquivo = JOptionPane.showInputDialog("Digite o caminho e o nome do arquivo. exemplo: ''ini.txt'': ");
-//		arq.readFile1(arquivo);
-//		arq.readFile2(arquivo);
-		arq.writeFile(arquivo);
-		arq.readFile3(arquivo);
-		
+		arq.readFile1(arquivo);
+		arq.readFile2(arquivo);
+//		arq.writeFile(arquivo);
+//		arq.readFile3(arquivo);
 		
 	}
 

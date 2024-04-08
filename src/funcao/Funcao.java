@@ -6,7 +6,7 @@ import model.People;
 public class Funcao {
 	People p = new People();
 	private String mensage;
-
+	
 	//Função que calcula a média do aluno
 	public void media() {
 		//BLOCO - Declaração de variáveis
@@ -14,24 +14,24 @@ public class Funcao {
 		String sn1, sn2, snr;
 		
 		// BLOCO - Entrada de Dados
-		sn1 = JOptionPane.showInputDialog("Digite o valor da Primeira nota: ");
+		sn1 = JOptionPane.showInputDialog("Digite o valor da Primeira nota: "); //8
 		nota1 = Float.parseFloat(sn1);
-		sn2 = JOptionPane.showInputDialog("Digite o valor da Segunda nota: ");
+		sn2 = JOptionPane.showInputDialog("Digite o valor da Segunda nota: "); //5
 		nota2 = Float.parseFloat(sn2);
 		
 		// BLOCO - Processamento
-		media = (nota1 + nota2)/2;
+		media = (nota1 + nota2)/2; //6.50
 						
 		// BLOCO - Saída de Dados
 		if(media >= 7) {
 			JOptionPane.showMessageDialog(null, "Aprovado com média: " + media);
 		}else if(media < 7){
-			JOptionPane.showMessageDialog(null, "Aluno em Recuperação " + media);
-			snr = JOptionPane.showInputDialog("Digite o valor da nota de Recuperação: ");
+			JOptionPane.showMessageDialog(null, "Aluno em Recuperação " + media); //6.50
+			snr = JOptionPane.showInputDialog("Digite o valor da nota de Recuperação: "); //5
 			notar = Float.parseFloat(snr);
-			mediar = (media + notar)/2;
+			mediar = (media + notar)/2; //5.25
 			if(mediar >= 5) {
-				JOptionPane.showMessageDialog(null, "Aprovado em recuperação com média " + mediar);
+				JOptionPane.showMessageDialog(null, "Aprovado em recuperação com média " + mediar); //5.25
 			}else {
 				JOptionPane.showMessageDialog(null, "Reprovado com média " + mediar);
 
@@ -41,11 +41,11 @@ public class Funcao {
 	
 	//Função que retorna uma mensagem do tipo String
 	public String mensagem(String mensagem) {
-		this.mensage = (mensagem + " Você entrou na função que retorna uma String");
+		this.mensage = (mensagem + "! Você entrou na função que retorna uma String");
 		return mensage;
 	}
 
-	public void prinPerson(){
+	public void printPerson(){
 		//BLOCO - Declaração de variáveis
 		int idade;
 		String sidade;
@@ -60,11 +60,11 @@ public class Funcao {
 		p.setAge(idade = Integer.parseInt(sidade));
 		//---------------------
 		JOptionPane.showMessageDialog(null,"Os dados da pessoa são: Nome: " + p.getName()
-																			+ " Sobre Nome: " + p.getLastName()
-																			+ " CPF: " + p.getCpf()
-																			+ " Data de Nascimento: " + p.getBirthDay()
-																			+ " Idade: " + p.getAge()
-																			+ " Telefone: " + p.getPhoneNumber());
+																	+ " Sobre Nome: " + p.getLastName()
+																	+ " CPF: " + p.getCpf()
+																	+ " Data de Nascimento: " + p.getBirthDay()
+																	+ " Idade: " + p.getAge()
+																	+ " Telefone: " + p.getPhoneNumber());
 	}
 	
 }

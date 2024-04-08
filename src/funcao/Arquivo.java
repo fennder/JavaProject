@@ -22,23 +22,22 @@ import model.Product;
  */
 public class Arquivo {
 	
-
 	List<Product> list = new ArrayList<>();
-	
 	public void readFile1(String arquivo) {
-		
-		File path = new File("/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
+//		File path = new File("/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
+		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		Scanner read = null;
 		try {
 			read = new Scanner(path);
 			while(read.hasNextLine()) {
-				JOptionPane.showMessageDialog(null, read.nextLine());				
+				System.out.println(read.nextLine());
+//				JOptionPareadFile3ne.showMessageDialog(null, read.nextLine());				
 			}
-			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			//	e.printStackTrace();
-			JOptionPane.showMessageDialog(null, e.getMessage());
+			System.out.println(e.getMessage());
+//			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
 		finally {
 			if(read != null) {
@@ -49,7 +48,8 @@ public class Arquivo {
 
 	public void readFile2(String arquivo) {
 		// Variável
-		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
+//		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
+		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		FileReader fr = null;
 		BufferedReader br = null;
 		
