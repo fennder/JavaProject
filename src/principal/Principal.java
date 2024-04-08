@@ -12,22 +12,23 @@ import funcao.Funcao;
 	
 public class Principal {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// BLOCO - Declaração de variáveis
 		String mensagem, arquivo;
 		Funcao funcao = new Funcao();
 		Arquivo arq = new Arquivo();
 		
-		//mensagem = JOptionPane.showInputDialog("Digite o seu nome: ");
-		
-		//funcao.media();
-		//funcao.mensagem(mensagem);
-		//JOptionPane.showMessageDialog(null, funcao.mensagem(mensagem));
-		//funcao.prinPerson();
+//		mensagem = JOptionPane.showInputDialog("Digite o seu nome: ");
+//		
+//		funcao.media();
+//		funcao.mensagem(mensagem);
+//		JOptionPane.showMessageDialog(null, funcao.mensagem(mensagem));
+//		funcao.prinPerson();
 
 		arquivo = JOptionPane.showInputDialog("Digite o caminho e o nome do arquivo. exemplo: ''ini.txt'': ");
-		arq.readFile1(arquivo);
-		arq.readFile2(arquivo);
+//		arq.readFile1(arquivo);
+//		arq.readFile2(arquivo);
+		arq.writeFile(arquivo);
 		arq.readFile3(arquivo);
 		
 		

@@ -44,6 +44,15 @@ public class Product implements Serializable{
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [name=" + name + ", price=" + price + ", quantity=" + quantity + "]";
+	}
 	
+	public Double total() {
+		double total = price * quantity;
+		return total;
+	}
 	
 }
