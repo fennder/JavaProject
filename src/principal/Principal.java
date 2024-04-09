@@ -27,10 +27,18 @@ public class Principal {
 //		funcao.printPerson();
 
 		arquivo = JOptionPane.showInputDialog("Digite o caminho e o nome do arquivo. exemplo: ''ini.txt'': ");
-		arq.readFile1(arquivo);
-		arq.readFile2(arquivo);
+//		arq.readFile1(arquivo);
+		System.out.println("");
+//		arq.readFile2(arquivo);
+		System.out.println("");
 //		arq.writeFile(arquivo);
 //		arq.readFile3(arquivo);
+		System.out.println("");
+		
+//		funcao.matriz();
+		funcao.vetor();
+		funcao.ordenar();
+		
 		
 	}
 

@@ -47,23 +47,23 @@ public class Arquivo {
 	}
 
 	public void readFile2(String arquivo) {
-		// Variável
 //		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
 		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		FileReader fr = null;
 		BufferedReader br = null;
-		
 		try {
 			fr = new FileReader(path);
 			br = new BufferedReader(fr);
 			String line = br.readLine();
 			while(line != null) {
-				JOptionPane.showMessageDialog(null, line);
+				System.out.println(line);
+//				JOptionPane.showMessageDialog(null, line);
 				line = br.readLine();
 			}
 		}
 		catch (IOException e) {
-			JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
+			System.out.println("Error: " + e.getMessage());
+//			JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());
 		}
 		finally{
 			try {
@@ -77,56 +77,50 @@ public class Arquivo {
 	}
 
 	public void readFile3(String arquivo) {
-		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;//Simplificado
-		
-		
+//		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;//Simplificado
+		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		try (BufferedReader br = new BufferedReader(new FileReader(path))){ //Simplificado
 			String line = br.readLine(); //Simplificado
 			line = br.readLine();
 			while(line != null) { //Simplificado
 //				JOptionPane.showMessageDialog(null, line); //Simplificado
-				
 				String[] vect = line.split(",");
 				String name = vect[0];
 				Double price = Double.parseDouble(vect[1]);
 				Integer qte = Integer.parseInt(vect[2]);
 //				Double total = Double.parseDouble(vect[3]);
-				
 				Product prod = new Product(name, price, qte);
 				list.add(prod);
-				
 				line = br.readLine(); //Simplificado
-				
 			}
-//			JOptionPane.showMessageDialog(null, "Produtos");
+			//			JOptionPane.showMessageDialog(null, "Produtos");
 			System.out.println("Produtos");
-			for(Product p :list) {
+			for(Product p : list) {
 //				JOptionPane.showMessageDialog(null, p);
 				System.out.println(p);
 			}
-			
 		}
 		catch(IOException e) {
-			JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());//Simplificado
+			System.out.println("Error: " + e.getMessage());
+//			JOptionPane.showMessageDialog(null, "Error: " + e.getMessage());//Simplificado
 		}
 	}
 	
 	public void writeFile(String arquivo) throws IOException{
-		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
+//		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
+		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		
 //		List<Product> list = new ArrayList<>();
 		try {
-			BufferedWriter br = new BufferedWriter(new FileWriter(path, true));
-//			FileWriter fw = new FileWriter(path, true);
-//			fw.write(JOptionPane.showInputDialog(null, "Digite o produto, Descrição, Valor, Quantidade:"+"\n"));
-			br.write(JOptionPane.showInputDialog(null, "Digite o produto, Descrição: "));
-			br.write(",");
-			br.write(JOptionPane.showInputDialog(null, "Digite o produto, Valor: "));
-			br.write(",");
-			br.write(JOptionPane.showInputDialog(null, "Digite o produto, Quantidade: "));
-			
-			br.write("\n");
-			br.close();
+			BufferedWriter bw = new BufferedWriter(new FileWriter(path, true)); //incrementou
+
+			bw.write(JOptionPane.showInputDialog(null, "Digite o produto, Descrição: "));
+			bw.write(",");
+			bw.write(JOptionPane.showInputDialog(null, "Digite o produto, Valor: "));
+			bw.write(",");
+			bw.write(JOptionPane.showInputDialog(null, "Digite o produto, Quantidade: "));
+			bw.write("\n");
+			bw.close();
 						
 		} catch (IOException e) {
 			e.printStackTrace();

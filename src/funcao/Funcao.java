@@ -1,10 +1,18 @@
 package funcao;
 
+import java.util.Arrays;
+import java.util.Random;
+
 import javax.swing.JOptionPane;
 import model.People;
 
 public class Funcao {
+	
+	String stv;
+	int tv, j, i;
+		
 	People p = new People();
+	Random rand = new Random();
 	private String mensage;
 	
 	//Função que calcula a média do aluno
@@ -38,7 +46,6 @@ public class Funcao {
 			}
 		}
 	}
-	
 	//Função que retorna uma mensagem do tipo String
 	public String mensagem(String mensagem) {
 		this.mensage = (mensagem + "! Você entrou na função que retorna uma String");
@@ -67,4 +74,55 @@ public class Funcao {
 																	+ " Telefone: " + p.getPhoneNumber());
 	}
 	
+	public void vetor() {
+//		stv = JOptionPane.showInputDialog("Digite o tamanho do vetor: ");
+//		tv = Integer.parseInt(stv);
+		tv = 15;
+		//Números da Loto fácil
+		int[] numeros = new int[tv];
+
+		for(i=1; i<numeros.length;i++) {
+			int randomico = rand.nextInt(25);
+			numeros[i] = randomico;
+			System.out.print(numeros[i] + "|");
+		}
+		System.out.println();
+		for (i=1; i<numeros.length;i++) {
+			Arrays.sort(numeros);
+			System.out.print(numeros[i] + "|");
+		}
+		System.out.println();
+		
+	}
+	
+	public void matriz() {
+		int[][] tabela = new int[10][10];
+		
+		for(i=0;i<tabela.length;i++) {
+			for(j=0;j<tabela.length;j++) {
+				int matriz = rand.nextInt(2);
+				tabela[i][j] = matriz;
+				
+				System.out.print(tabela[i][j] + "|");
+			}
+			System.out.println();
+		}
+	}
+	
+	public void ordenar() {
+		String[] nomes = new String[] {"Carlos","Luiz","Ana","Vitória","Gabriel","Lucas","Bruno"};
+		
+		System.out.println("Nomes não ordenados");
+		
+		for(String nome : nomes) {
+			System.out.print("|" + nome);
+		}
+		
+		Arrays.sort(nomes);
+		System.out.println();
+		System.out.println("Nomes ordenados");
+		for(String nome : nomes) {
+			System.out.print("|" + nome);
+		}
+	}
 }
