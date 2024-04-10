@@ -26,7 +26,7 @@ public class Principal {
 //		funcao.media();
 //		funcao.printPerson();
 
-		arquivo = JOptionPane.showInputDialog("Digite o caminho e o nome do arquivo. exemplo: ''ini.txt'': ");
+//		arquivo = JOptionPane.showInputDialog("Digite o caminho e o nome do arquivo. exemplo: ''ini.txt'': ");
 //		arq.readFile1(arquivo);
 		System.out.println("");
 //		arq.readFile2(arquivo);
@@ -35,9 +35,11 @@ public class Principal {
 //		arq.readFile3(arquivo);
 		System.out.println("");
 		
-//		funcao.matriz();
 		funcao.vetor();
+		System.out.println();
 		funcao.ordenar();
+		System.out.println();
+		funcao.matriz();
 		
 		
 	}

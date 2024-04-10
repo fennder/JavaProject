@@ -75,26 +75,39 @@ public class Funcao {
 	}
 	
 	public void vetor() {
+		JOptionPane.showMessageDialog(null, "Gere os 15 números da Lotofácil: ");
 //		stv = JOptionPane.showInputDialog("Digite o tamanho do vetor: ");
 //		tv = Integer.parseInt(stv);
 		tv = 15;
 		//Números da Loto fácil
 		int[] numeros = new int[tv];
-
-		for(i=1; i<numeros.length;i++) {
-			int randomico = rand.nextInt(25);
-			numeros[i] = randomico;
-			System.out.print(numeros[i] + "|");
+		
+		for(i=0;i < numeros.length;i++) {
+			int novoNumero;
+			boolean repetido;
+			
+			do {
+				repetido = false;
+				novoNumero = rand.nextInt(24)+1;
+				
+				for(int j=0;j < numeros.length; j++) {
+					if(numeros[j] == novoNumero) {
+						repetido = true;
+						break;
+					}
+				}
+			} while (repetido == true);
+			numeros[i] = novoNumero;
 		}
-		System.out.println();
-		for (i=1; i<numeros.length;i++) {
-			Arrays.sort(numeros);
-			System.out.print(numeros[i] + "|");
+		Arrays.sort(numeros);
+		System.out.println("Numeros não repetidos");
+		for(int numero : numeros) {
+			System.out.print(numero + "|");
 		}
 		System.out.println();
 		
 	}
-	
+		
 	public void matriz() {
 		int[][] tabela = new int[10][10];
 		
@@ -110,6 +123,7 @@ public class Funcao {
 	}
 	
 	public void ordenar() {
+		System.out.println();
 		String[] nomes = new String[] {"Carlos","Luiz","Ana","Vitória","Gabriel","Lucas","Bruno"};
 		
 		System.out.println("Nomes não ordenados");
@@ -119,6 +133,7 @@ public class Funcao {
 		}
 		
 		Arrays.sort(nomes);
+		
 		System.out.println();
 		System.out.println("Nomes ordenados");
 		for(String nome : nomes) {
