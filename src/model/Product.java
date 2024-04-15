@@ -11,7 +11,7 @@ public class Product implements Serializable{
 	private Integer quantity;
 	
 	public Product() {
-		
+		super();
 	}
 
 	public Product(String name, Double price, Integer quantity) {

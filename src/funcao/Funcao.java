@@ -75,7 +75,8 @@ public class Funcao {
 	}
 	
 	public void vetor() {
-		JOptionPane.showMessageDialog(null, "Gere os 15 números da Lotofácil: ");
+		System.out.println("Gere os 15 números da Lotofácil: ");
+//		JOptionPane.showMessageDialog(null, "Gere os 15 números da Lotofácil: ");
 //		stv = JOptionPane.showInputDialog("Digite o tamanho do vetor: ");
 //		tv = Integer.parseInt(stv);
 		tv = 15;
@@ -100,7 +101,7 @@ public class Funcao {
 			numeros[i] = novoNumero;
 		}
 		Arrays.sort(numeros);
-		System.out.println("Numeros não repetidos");
+//		System.out.println("Numeros não repetidos");
 		for(int numero : numeros) {
 			System.out.print(numero + "|");
 		}
