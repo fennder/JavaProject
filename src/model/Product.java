@@ -2,8 +2,11 @@ package model;
 
 import java.io.Serializable;
 
+/**
+ * Algortimo idealizado para equipe 216 Desenvolvimento Web
+ * Prof.: Edir Pereira
+ */
 public class Product implements Serializable{
-	
 	
 	private static final long serialVersionUID = 1L;
 	private String name;

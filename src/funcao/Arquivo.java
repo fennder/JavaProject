@@ -1,6 +1,3 @@
-/**
- * 
- */
 package funcao;
 
 import java.io.BufferedReader;
@@ -18,7 +15,8 @@ import javax.swing.JOptionPane;
 import model.Product;
 
 /**
- * 
+ * Algortimo idealizado para equipe 216 Desenvolvimento Web
+ * Prof.: Edir Pereira
  */
 public class Arquivo {
 	

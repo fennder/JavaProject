@@ -6,6 +6,10 @@ import java.util.Random;
 import javax.swing.JOptionPane;
 import model.People;
 
+/**
+ * Algortimo idealizado para equipe 216 Desenvolvimento Web
+ * Prof.: Edir Pereira
+ */
 public class Funcao {
 	
 	String stv;
