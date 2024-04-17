@@ -12,11 +12,11 @@ import model.People;
  */
 public class Funcao {
 	
-	String stv;
-	int tv, j, i;
+	int tv, randi, j, i;
 		
 	People p = new People();
 	Random rand = new Random();
+	
 	private String mensage;
 	
 	//Função que calcula a média do aluno
@@ -77,13 +77,13 @@ public class Funcao {
 																	+ " Idade: " + p.getAge()
 																	+ " Telefone: " + p.getPhoneNumber());
 	}
-	
-	public void vetor() {
+		
+	public void lotofacil() {
 		System.out.println("Gere os 15 números da Lotofácil: ");
 //		JOptionPane.showMessageDialog(null, "Gere os 15 números da Lotofácil: ");
-//		stv = JOptionPane.showInputDialog("Digite o tamanho do vetor: ");
-//		tv = Integer.parseInt(stv);
-		tv = 15;
+		randi = Integer.parseInt(JOptionPane.showInputDialog("Digite a faixa de número: "));
+		tv = Integer.parseInt(JOptionPane.showInputDialog("Digite o tamanho do vetor: "));
+
 		//Números da Loto fácil
 		int[] numeros = new int[tv];
 		
@@ -93,7 +93,7 @@ public class Funcao {
 			
 			do {
 				repetido = false;
-				novoNumero = rand.nextInt(24)+1;
+				novoNumero = rand.nextInt(randi)+1;
 				
 				for(int j=0;j < numeros.length; j++) {
 					if(numeros[j] == novoNumero) {
@@ -110,7 +110,6 @@ public class Funcao {
 			System.out.print(numero + "|");
 		}
 		System.out.println();
-		
 	}
 		
 	public void matriz() {
@@ -145,4 +144,22 @@ public class Funcao {
 			System.out.print("|" + nome);
 		}
 	}
+	
+	public void vetor() {
+
+		//Entrada de dados
+		System.out.println("Preencher o meu vetor: ");
+		tv = Integer.parseInt(JOptionPane.showInputDialog("Digite o tamanho do vetor: ")); // 5
+		
+		//Declarar o meu vetor
+		int[] numeros = new int[tv];
+		
+		for(i = 0;i < numeros.length; i++) {
+//			int numeroEscolhido = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero:"));			
+			numeros[i] = rand.nextInt(20);
+			System.out.print(numeros[i] + " | ");
+		}
+		
+	}	
+
 }
