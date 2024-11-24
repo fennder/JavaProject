@@ -1,15 +1,16 @@
 package principal;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
 import funcao.Arquivo;
 import funcao.Funcao;
-	
+
+/**
+ * Algortimo idealizado para equipe 216 Desenvolvimento Web
+ * Prof.: Edir Pereira
+ */
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
@@ -37,11 +38,10 @@ public class Principal {
 		
 		// funcao.vetor();
 		System.out.println();
-//		funcao.ordenar();
+		funcao.ordenar();
 		System.out.println();
-		// funcao.matriz();
-//		 funcao.anoBiscexto();
-		// funcao.primo();
+		funcao.matriz();
+		
 		
 	}
 
