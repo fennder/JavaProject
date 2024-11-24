@@ -35,12 +35,13 @@ public class Principal {
 //		arq.readFile3(arquivo);
 		System.out.println("");
 		
-		funcao.vetor();
+		// funcao.vetor();
 		System.out.println();
-		funcao.ordenar();
+//		funcao.ordenar();
 		System.out.println();
-		funcao.matriz();
-		
+		// funcao.matriz();
+//		 funcao.anoBiscexto();
+		// funcao.primo();
 		
 	}
 

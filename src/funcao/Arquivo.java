@@ -24,8 +24,8 @@ public class Arquivo {
 	
 	List<Product> list = new ArrayList<>();
 	public void readFile1(String arquivo) {
-//		File path = new File("/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
-		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
+		File path = new File("/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
+//		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		Scanner read = null;
 		try {
 			read = new Scanner(path);
@@ -47,8 +47,8 @@ public class Arquivo {
 	}
 
 	public void readFile2(String arquivo) {
-//		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
-		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
+		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
+//		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		FileReader fr = null;
 		BufferedReader br = null;
 		try {
@@ -77,8 +77,8 @@ public class Arquivo {
 	}
 
 	public void readFile3(String arquivo) {
-//		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;//Simplificado
-		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
+		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;//Simplificado
+//		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		try (BufferedReader br = new BufferedReader(new FileReader(path))){ //Simplificado
 			String line = br.readLine(); //Simplificado
 			line = br.readLine();
@@ -107,8 +107,8 @@ public class Arquivo {
 	}
 	
 	public void writeFile(String arquivo) throws IOException{
-//		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
-		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
+		String path = "/home/fennder/Documents/Workspace/eclipse-workspace/JavaProject/src/tmp/" + arquivo;
+//		File path = new File("/home/edir/Documentos/eclipse-workspace/JavaProject/src/tmp/" + arquivo);
 		
 //		List<Product> list = new ArrayList<>();
 		try {

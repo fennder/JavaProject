@@ -2,6 +2,7 @@ package funcao;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 import model.People;
@@ -75,21 +76,32 @@ public class Funcao {
 	}
 	
 	public void vetor() {
-		JOptionPane.showMessageDialog(null, "Gere os 15 números da Lotofácil: ");
-//		stv = JOptionPane.showInputDialog("Digite o tamanho do vetor: ");
-//		tv = Integer.parseInt(stv);
+		/*
+		 * Programa: Tem por objetivo girar 15 números dentre os 25 possíveis.
+		 * Author: Edir Pereira
+		 * Data Criação: 01/05/2024
+		 */
+
+		 //Informação que diz o que o algorítmo deve fazer de início.
+		System.out.println("Gere os 15 números da Lotofácil: ");
+		//Variável declarado fora da função que informa tamanho do vetor
 		tv = 15;
-		//Números da Loto fácil
+		//Declaração de estrutura vetorial do tipo inteiro
 		int[] numeros = new int[tv];
 		
+		//Esta estrutura para/for é responsável em incluir um número no vetor. 
 		for(i=0;i < numeros.length;i++) {
 			int novoNumero;
 			boolean repetido;
 			
+			// Estrutura faça/do de repetição, tem por objetivo varrer todo vetor até encontrar um número igual, se encontrar ele entra no para/for
 			do {
 				repetido = false;
+				
+				//O novo número recebe da classe Random um novo inteiro entre 1 e 25, tal número é utilizado nesta função
 				novoNumero = rand.nextInt(24)+1;
 				
+				//Esta estrutura para/for varre toda a estrutura vetorial e verifica se o número gerado é igual àqueles números que já estão guardados.
 				for(int j=0;j < numeros.length; j++) {
 					if(numeros[j] == novoNumero) {
 						repetido = true;
@@ -99,21 +111,23 @@ public class Funcao {
 			} while (repetido == true);
 			numeros[i] = novoNumero;
 		}
+		//Esta funçao extraida da Classe Arrays serve para ordenar os números gerados aleatoriamente.
 		Arrays.sort(numeros);
+
+		//Esta estrutura para/for e impresso os números depois de ser ordenado.
 		System.out.println("Numeros não repetidos");
 		for(int numero : numeros) {
 			System.out.print(numero + "|");
 		}
 		System.out.println();
-		
 	}
 		
 	public void matriz() {
-		int[][] tabela = new int[10][10];
+		int[][] tabela = new int[15][15];
 		
 		for(i=0;i<tabela.length;i++) {
 			for(j=0;j<tabela.length;j++) {
-				int matriz = rand.nextInt(2);
+				int matriz = rand.nextInt(15);
 				tabela[i][j] = matriz;
 				
 				System.out.print(tabela[i][j] + "|");
@@ -139,5 +153,43 @@ public class Funcao {
 		for(String nome : nomes) {
 			System.out.print("|" + nome);
 		}
+	}
+
+	public void anoBiscexto(){
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Digite o ano: ");
+		int ano = scanner.nextInt();
+
+		boolean bissexto = ano % 4 == 0 && ((ano % 100) != 0  || ano % 400 == 0);
+
+		if (bissexto == true) {
+			System.out.println(ano + " é um ano bissexto");
+		} else {
+			System.out.println(ano + " não é um ano bissexto");
+		}
+		scanner.close();
+	}
+
+	public void primo(){
+		int contadorDeDivisores = 0;
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("\nDigite um numero para verificar se é primo:");
+		int numero = scanner.nextInt();
+
+		for (int i = 2; i < numero; i++) {
+			if (numero % i == 0) {
+				contadorDeDivisores++;
+			}
+		}
+
+		if (contadorDeDivisores == 0) {
+			System.out.println("\nO numero " + numero + " é primo.");
+		} else {
+			System.out.println("\nO numero " + numero + " não é primo.");
+		}
+
+		scanner.close();
 	}
 }
