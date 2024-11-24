@@ -42,7 +42,6 @@ public class Principal {
 		System.out.println();
 		funcao.matriz();
 		
-		
 	}
 
 }
